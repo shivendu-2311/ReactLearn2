@@ -21,6 +21,7 @@ function App() {
  <Route path="/:x///:y" element={<AddParams/>}/>
  
  {/* navigat is used for unmatched url or default url */}
+ <Route path="/" element={<Home/>}/>
  <Route path="*" element={<Navigate to="/"/>}/>
  </Routes>
  </BrowserRouter>
