@@ -1,6 +1,7 @@
 import {BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import './App.css';
 import AddParams from "./Components/AddParams";
+import Carousel from "./Components/Carousel";
 import Donald from "./Components/Donald";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
@@ -28,6 +29,7 @@ function App() {
 
  <Route path="/form" element={<Form/>}/>
  <Route path="/Notetaking" element={<Notetaking/>}/>
+ <Route path="/carousel" element={<Carousel/>}/>
  </Routes>
  </BrowserRouter>
   );
