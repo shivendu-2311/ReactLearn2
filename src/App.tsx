@@ -8,6 +8,9 @@ import Home from "./Components/Home";
 import Notetaking from "./Components/Notetaking";
 import Obama from "./Components/Obama";
 import { Sachin } from "./Components/Sachin";
+import UseEffectOne from "./Components/useEffectOne";
+import UseEffectThree from "./Components/useEffectThree";
+import UseEffectTwo from "./Components/useEffectTwo";
 import UserParams from "./Components/UserParams";
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
  <Route path="/form" element={<Form/>}/>
  <Route path="/Notetaking" element={<Notetaking/>}/>
  <Route path="/carousel" element={<Carousel/>}/>
+ <Route path="/useEffectOne" element={<UseEffectOne/>}/>
+ <Route path="/useEffectTwo" element={<UseEffectTwo/>}/>
+ <Route path="/useEffectThree" element={<UseEffectThree/>}/>
  </Routes>
  </BrowserRouter>
   );
