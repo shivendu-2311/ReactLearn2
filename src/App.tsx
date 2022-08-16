@@ -1,12 +1,16 @@
+import { Provider } from "react-redux";
 import {BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import './App.css';
 import AddParams from "./Components/AddParams";
+import { configureStore } from "./Components/Appstate";
 import Carousel from "./Components/Carousel";
+import ContextParent from "./Components/ContextParent";
 import Donald from "./Components/Donald";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
 import Notetaking from "./Components/Notetaking";
 import Obama from "./Components/Obama";
+import ReduxExample from "./Components/ReduxExample";
 import { Sachin } from "./Components/Sachin";
 import UseEffectOne from "./Components/useEffectOne";
 import UseEffectThree from "./Components/useEffectThree";
@@ -16,6 +20,7 @@ import UserParams from "./Components/UserParams";
 function App() {
   return (
  <BrowserRouter>
+  <Provider store={configureStore()}>
  <Routes>
  <Route path="/sachin" element={<Sachin/>}/>
  <Route path="/donald" element={<Donald/>}/>
@@ -36,7 +41,10 @@ function App() {
  <Route path="/useEffectOne" element={<UseEffectOne/>}/>
  <Route path="/useEffectTwo" element={<UseEffectTwo/>}/>
  <Route path="/useEffectThree" element={<UseEffectThree/>}/>
+ <Route path="/contextParent" element={<ContextParent/>}/>
+ <Route path="/ReduxExample" element={<ReduxExample/>}/>
  </Routes>
+ </Provider>
  </BrowserRouter>
   );
 }
