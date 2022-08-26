@@ -18,7 +18,7 @@ export default function Hotels(){
             dispatch(setHotels(json.map(x => x.restaurant)));
         }
   api();
-    },[]);
+    },[dispatch]);
     
     function  renderHotel(hotel: IHotel, index: number)
     {
