@@ -1,0 +1,20 @@
+.btn
+{
+    background-color:ora#1976d2!important ;
+    color: antiquewhite!important;
+}
+.search_box_head
+{
+    display: flex;
+    width: 40%;
+    background-color:#1976d2;
+    border: 1px solid #2c4152;
+    border-radius: 24px;
+    align-items: center;
+}.Nav_Item
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}

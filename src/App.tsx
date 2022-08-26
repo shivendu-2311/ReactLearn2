@@ -8,6 +8,9 @@ import ContextParent from "./Components/ContextParent";
 import Donald from "./Components/Donald";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
+import Hotel from "./Components/Hotel";
+import Hotels from "./Components/Hotels";
+import MaterialUiExample from "./Components/MaterialUiExample";
 import Notetaking from "./Components/Notetaking";
 import Obama from "./Components/Obama";
 import ReduxExample from "./Components/ReduxExample";
@@ -43,6 +46,10 @@ function App() {
  <Route path="/useEffectThree" element={<UseEffectThree/>}/>
  <Route path="/contextParent" element={<ContextParent/>}/>
  <Route path="/ReduxExample" element={<ReduxExample/>}/>
+ <Route path="/Hotels" element={<Hotels/>}/>
+
+ <Route path="/MaterialUiExample" element={<MaterialUiExample/>}/>
+
  </Routes>
  </Provider>
  </BrowserRouter>
