@@ -8,7 +8,6 @@ import ContextParent from "./Components/ContextParent";
 import Donald from "./Components/Donald";
 import Form from "./Components/Form";
 import Home from "./Components/Home";
-import Hotel from "./Components/Hotel";
 import Hotels from "./Components/Hotels";
 import MaterialUiExample from "./Components/MaterialUiExample";
 import Notetaking from "./Components/Notetaking";

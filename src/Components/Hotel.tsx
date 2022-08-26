@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, makeStyles, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { IHotel } from "./HotelsSlice";
 import "./Hotel.css"
 
