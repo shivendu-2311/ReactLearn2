@@ -4,7 +4,6 @@ import './App.css';
 import AddParams from "./Components/AddParams";
 import { configureStore } from "./Components/Appstate";
 import Carousel from "./Components/Carousel";
-import ContextParent from "./Components/ContextParent";
 import Donald from "./Components/Donald";
 //import Form from "./Components/Form";
 //import Home from "./Components/Home";
@@ -13,6 +12,7 @@ import Login from "./Components/Login";
 import MaterialUiExample from "./Components/MaterialUiExample";
 import Notetaking from "./Components/Notetaking";
 import Obama from "./Components/Obama";
+import Profile from "./Components/Profile";
 import ReduxExample from "./Components/ReduxExample";
 import { Sachin } from "./Components/Sachin";
 import SignUp from "./Components/SignUp";
@@ -20,10 +20,12 @@ import UseEffectOne from "./Components/useEffectOne";
 import UseEffectThree from "./Components/useEffectThree";
 import UseEffectTwo from "./Components/useEffectTwo";
 import UserParams from "./Components/UserParams";
+import ContextParent from "./Components/ContextParent";
 //import './firebaseSetup'
 
 function App() {
   return (
+    <ContextParent>
  <BrowserRouter>
   <Provider store={configureStore()}>
  <Routes>
@@ -46,17 +48,19 @@ function App() {
  <Route path="/useEffectOne" element={<UseEffectOne/>}/>
  <Route path="/useEffectTwo" element={<UseEffectTwo/>}/>
  <Route path="/useEffectThree" element={<UseEffectThree/>}/>
- <Route path="/contextParent" element={<ContextParent/>}/>
  <Route path="/ReduxExample" element={<ReduxExample/>}/>
  <Route path="/Hotels" element={<Hotels/>}/>
  <Route path="/Signup" element={<SignUp/>}/>
  <Route path="/Login" element={<Login/>}/>
+ <Route path="/Profile" element={<Profile/>}/>
+ 
 
  <Route path="/MaterialUiExample" element={<MaterialUiExample/>}/>
 
  </Routes>
  </Provider>
  </BrowserRouter>
+ </ContextParent>
   );
 }
 

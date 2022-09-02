@@ -1,0 +1,54 @@
+
+.profile_main
+{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    color: whitesmoke;
+    background-color: black;
+   
+}
+.inside_profile .name
+{
+    display: flex
+}
+.inside_profile .email
+{
+    display: flex;
+   
+}
+.inside_profile .btn
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.profile_main img
+{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    border: 2px black solid;
+    border-radius: 50px;
+}
+
+#files
+{
+    visibility: hidden;
+}
+@media screen and (max-width: 484px) {
+    .inside_profile .email
+{
+    flex-direction: column;
+   
+}
+   
+  }

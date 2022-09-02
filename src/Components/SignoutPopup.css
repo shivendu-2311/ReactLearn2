@@ -1,0 +1,48 @@
+.outer_pop
+{
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+   
+}
+.inner_pop
+{
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: black;
+    z-index: 1075!important;
+    min-height: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.up
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Down
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.Down Fab
+{
+    width: 58px!important;
+    background-color: red!important;
+}
