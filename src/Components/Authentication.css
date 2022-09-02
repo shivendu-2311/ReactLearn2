@@ -1,0 +1,25 @@
+.outer_box
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+}
+.inner_box
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.btn_pro
+{
+    display: flex;
+    justify-content: flex-end;
+    gap:10px;
+}
+.error
+{
+    color: red;
+}

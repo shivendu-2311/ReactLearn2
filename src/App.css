@@ -10,3 +10,9 @@
   background-color: rgb(0, 255, 221);
   color: black;
 }
+html,body,#root{
+  width: 100%!important;
+  height: 100vh!important;
+  margin: 0;
+  padding: 0;
+}

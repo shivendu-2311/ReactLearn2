@@ -1,9 +1,11 @@
 import { AppBar, Button, InputBase } from "@mui/material";
 import "./TopBar.css";
 import { FaSistrix } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export default function TopBar() {
+    const navigator = useNavigate();
   return (
-    <AppBar>
+    <AppBar className="app">
       <div className="Nav_Item">
         <div className="logo">
           <img
@@ -14,11 +16,10 @@ export default function TopBar() {
         <InputBase />
         <div className="search_box_head">
           <FaSistrix></FaSistrix>
-          <InputBase />
+          <InputBase className="search_" placeholder="Find Here"/>
         </div>
-        <Button className="btn">Home</Button>
-        <Button className="btn">Login</Button>
-        <Button className="btn">signup</Button>
+        <Button className="btn" onClick={()=>navigator("/Login")}>Login</Button>
+        <Button className="btn" onClick={()=>navigator("/SignUp")}>signup</Button>
       </div>
     </AppBar>
   );

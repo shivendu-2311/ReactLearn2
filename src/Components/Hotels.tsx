@@ -6,7 +6,7 @@ import { AppState } from "./Appstate";
 import Hotel from "./Hotel";
 import { IHotel, setHotels } from "./HotelsSlice";
 import TopBar from "./TopBar";
-
+import "./Hotels.css"
 
 export default function Hotels(){
     const dispatch = useDispatch();
@@ -29,7 +29,7 @@ export default function Hotels(){
     return (
       <>
         <TopBar/>
-        <Grid container spacing={8}>
+        <Grid container spacing={8} className="grid">
             {data.map(renderHotel)}
         </Grid>
         </>
