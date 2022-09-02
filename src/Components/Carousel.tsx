@@ -1,6 +1,6 @@
 import { useState } from "react";
 
- export default function Carousel(){
+ export default function  Carousel(){
 const [current, setCurrent] = useState<number>(0);
 const images = [
     "https://media.istockphoto.com/photos/carrousel-at-dusk-picture-id136325144?s=612x612",
