@@ -1,4 +1,80 @@
-.image {
-    height:300px;
-    width:376px;
+.img1
+{
+    margin: auto;
+    width: 100%;
+    height: 157px;
+    
+    border-radius: 10px;
 }
+.main_hele
+{
+    padding-top: 70px;
+    display: grid;
+  
+    row-gap: 9px;
+    column-gap: 9px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    align-items: center;
+    justify-items: center;
+}
+
+.hotel_main .btn1
+{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+
+}
+.hotel_main .btn2
+{
+    position: absolute;
+    border: 2px #1976d2 solid;
+    text-decoration: none;
+    bottom: 2px;
+    left: 2px;
+    width: 40px;
+    padding:auto;
+    text-align: center;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 20px;
+
+}
+.too
+{
+    position: relative!important;
+    width: 300px!important;
+    height: 300px!important;
+    border:3px rgb(17, 0, 128) solid;
+    border-radius: 10px!important;
+}
+/* .too:hover
+{
+   transform: scale(1.1,1.3);
+   z-index:10;
+   transform-origin:  50% 0%;
+   transition: all 300ms ease-in-out;
+} */
+/* .too:hover .img1
+{
+    height: 200px;
+} */
+
+@media screen and (max-width: 900px) {
+    .main_hele {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .main_hele {
+        grid-template-columns: 1fr;
+    }
+    .too:hover
+    {
+        transform: none;
+        z-index: 1;
+        transform-origin: none;
+    }
+  }
+  

@@ -1,4 +1,12 @@
 .grid{
-    margin: 10px;
+    margin: 5px;
    padding: auto;
+   margin-top: 5px;
+   padding-top: 80px;
+   row-gap: 9px;
+   column-gap: 9px;
+   align-items: center;
+   justify-items: center;
+   padding-left: 30px;
+
 }

@@ -43,10 +43,11 @@ export default function Hotels(){
     }
     return (
       <>
-        <TopBar/>
+        <TopBar />
         <Grid container spacing={8} className="grid">
             {data.map(renderHotel)}
         </Grid>
+
         </>
     );
 }
