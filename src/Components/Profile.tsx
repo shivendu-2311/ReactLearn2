@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "./ContextParent";
 import { auth } from "./firebaseSetup";
-import { deleteObject,getDownloadURL, getStorage, ref} from "firebase/storage";
+import { deleteObject,getDownloadURL, getStorage, ref, uploadBytes} from "firebase/storage";
 import './Profile.css'
 import LoadingSpinner from "./LoadingSpinner";
 import { toast } from "react-toastify";
@@ -31,7 +31,7 @@ export default function Profile()
       
         setLoading(true);
         
-        // const snapshot = await uploadBytes(fileRef, file);
+     const snapshot = await uploadBytes(fileRef, file);
         const photoURL = await getDownloadURL(fileRef);
      
         
@@ -58,25 +58,25 @@ export default function Profile()
     }
     async function upload1(file:any, user:any) {
       try{
-        // const fileRef = ref(storage, user.uid + '.jpg');
+     const fileRef = ref(storage, user.uid + '.jpg');
         let pictureRef = ref(storage, user.uid+'.jpg');
         deleteObject(pictureRef).then(()=>
         console.log("deleted"))
-        // setLoading(true);
+      setLoading(true);
         
-        // // const snapshot = await uploadBytes(fileRef, file);
-        // const photoURL = await getDownloadURL(fileRef);
+      const snapshot = await uploadBytes(fileRef, file);
+      const photoURL = await getDownloadURL(fileRef);
      
         
         setPhotoURL("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png");
          
-        //  {console.log(photoURL)} 
+      {console.log(photoURL)} 
         updateProfile(user, {photoURL:"https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"});
    
        
-        // // setLoading(false);
+        setLoading(false);
          toast.success('Profile Deleted sucessfully!')
-        // setPhoto(null)
+ setPhoto(null)
       }
       catch(e:any)
       {
@@ -102,7 +102,7 @@ export default function Profile()
       try{
       if (user?.photoURL) {
     
-        // {console.log(photoURL)} 
+      {console.log(photoURL)} 
         setPhotoURL(user.photoURL);
       }
       else{
@@ -120,8 +120,8 @@ export default function Profile()
   
     if(user)
     {
-        //  {console.log(photoURL)} 
-        //  {console.log(photo)}
+        {console.log(photoURL)} 
+      {console.log(photo)}
         return(
           <>
             <div className="profile_main">

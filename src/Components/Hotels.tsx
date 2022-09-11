@@ -44,7 +44,7 @@ export default function Hotels(){
     return (
       <>
         <TopBar />
-        <Grid container spacing={8} >
+        <Grid container spacing={8} className="grid">
             {data.map(renderHotel)}
         </Grid>
 
