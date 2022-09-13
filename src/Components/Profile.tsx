@@ -65,7 +65,7 @@ export default function Profile()
       setLoading(true);
         
     await uploadBytes(fileRef, file);
-      const photoURL = await getDownloadURL(fileRef);
+      //const photoURL = await getDownloadURL(fileRef);
    
         
         setPhotoURL("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png");
