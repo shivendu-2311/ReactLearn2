@@ -21,6 +21,7 @@ import UseEffectThree from "./Components/useEffectThree";
 import UseEffectTwo from "./Components/useEffectTwo";
 import UserParams from "./Components/UserParams";
 import ContextParent from "./Components/ContextParent";
+import HotelDetails from "./Components/HotelDetails";
 //import './firebaseSetup'
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
  
  {/* navigat is used for unmatched url or default url */}
  <Route path="/" element={<Hotels/>}/>
+ <Route path="/hotel/:hotelID" element={<HotelDetails />}></Route>
  <Route path="*" element={<Navigate to="/"/>}/>
 
 

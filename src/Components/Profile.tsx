@@ -31,7 +31,7 @@ export default function Profile()
       
         setLoading(true);
         
-     const snapshot = await uploadBytes(fileRef, file);
+          await uploadBytes(fileRef, file);
         const photoURL = await getDownloadURL(fileRef);
      
         
@@ -42,7 +42,7 @@ export default function Profile()
    
        
         setLoading(false);
-         toast.success('Profile Uploaded sucessfully!')
+         toast.success('Profile Uploaded sucessfully!');
          window.location.reload()
         setPhoto(null)
       }
@@ -64,13 +64,13 @@ export default function Profile()
         console.log("deleted"))
       setLoading(true);
         
-      const snapshot = await uploadBytes(fileRef, file);
+    await uploadBytes(fileRef, file);
       const photoURL = await getDownloadURL(fileRef);
-     
+   
         
         setPhotoURL("https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png");
          
-      {console.log(photoURL)} 
+      //{console.log(photoURL)} 
         updateProfile(user, {photoURL:"https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"});
    
        
@@ -102,7 +102,7 @@ export default function Profile()
       try{
       if (user?.photoURL) {
     
-      {console.log(photoURL)} 
+      //{console.log(photoURL)} 
         setPhotoURL(user.photoURL);
       }
       else{
@@ -120,8 +120,8 @@ export default function Profile()
   
     if(user)
     {
-        {console.log(photoURL)} 
-      {console.log(photo)}
+       // {console.log(photoURL)} 
+      //{console.log(photo)}
         return(
           <>
             <div className="profile_main">
