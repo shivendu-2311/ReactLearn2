@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { IHotel } from "./HotelsSlice";
 import './HotelDetails.css'
 import { Fab } from "@mui/material";
-import { toast } from "react-toastify";
+import {toast } from "react-toastify";
 import LoadingSpinner from "./LoadingSpinner";
 
 export default function HotelDetails()

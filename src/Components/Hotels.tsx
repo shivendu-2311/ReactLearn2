@@ -8,9 +8,11 @@ import { IHotel, setHotels } from "./HotelsSlice";
 import TopBar from "./TopBar";
 import "./Hotel.css"
 
+
 export default function Hotels(){
     const dispatch = useDispatch();
-    const data = useSelector((x:AppState) => x.hotelSlice);
+    const count=useSelector((x:AppState)=>x.hotelSlice)
+    const search_t=useSelector((x:AppState)=>x.valueset)
     useEffect(()=>{
         async function api(){
           var myHeaders = new Headers();
@@ -35,17 +37,19 @@ export default function Hotels(){
   api();
     },[dispatch]);
     
-    function  renderHotel(hotel: IHotel, index: number)
-    {
-        return <Grid item key = {index}>
-            <Hotel {...hotel}/>
-        </Grid>
-    }
     return (
       <>
         <TopBar />
         <div  className="grid">
-            {data.map(renderHotel)}
+        {count.map((x,i)=> {
+          console.log(search_t.name)
+      if(x.name.toLocaleLowerCase().includes(search_t.name.toLocaleLowerCase()))
+      return(
+        <>
+      <Hotel key={i} {...x}/>
+      </>
+      )
+      return <></>})}
         </div>
 
         </>

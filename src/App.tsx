@@ -22,11 +22,13 @@ import UseEffectTwo from "./Components/useEffectTwo";
 import UserParams from "./Components/UserParams";
 import ContextParent from "./Components/ContextParent";
 import HotelDetails from "./Components/HotelDetails";
+import { ToastContainer} from "react-toastify";
 //import './firebaseSetup'
 
 function App() {
   return (
     <ContextParent>
+      <ToastContainer/>
  <BrowserRouter>
   <Provider store={configureStore()}>
  <Routes>
@@ -58,6 +60,7 @@ function App() {
  
 
  <Route path="/MaterialUiExample" element={<MaterialUiExample/>}/>
+ 
 
  </Routes>
  </Provider>
